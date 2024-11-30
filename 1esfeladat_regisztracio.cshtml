@@ -1,0 +1,28 @@
+<!-- Pages/regisztracio.cshtml -->
+@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h2>Register</h2>
+
+<form method="post">
+    <div>
+        <label for="Nev">Name</label>
+        <input asp-for="Felhasznalo.nev" id="Nev" />
+        <span asp-validation-for="Felhasznalo.nev" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label for="Email">Email</label>
+        <input asp-for="Felhasznalo.Email" id="Email" />
+        <span asp-validation-for="Felhasznalo.Email" class="text-danger"></span>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
